@@ -1,0 +1,163 @@
+{
+  "metrics": {
+    "accuracy": 0.7474747474747475,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.8454054054054053,
+    "pr_auc": 0.6038798498122653,
+    "timestamp": "2025-11-14 14:41:48",
+    "data_size": 99
+  },
+  "validation_stats": {
+    "companies": {
+      "valid": 494,
+      "invalid": 6,
+      "errors": [
+        {
+          "row": 0,
+          "data": {
+            "company_id": 1,
+            "company_name": "Technology",
+            "company_size": "3",
+            "industry": "Large",
+            "employee_count": 50000000,
+            "data_sensitivity": 500000,
+            "security_budget": 1500,
+            "annual_revenue": "San Francisco",
+            "headquarters_location": "CA",
+            "compliance_certifications": "SOC2",
+            "remote_workers_percentage": "85",
+            "last_security_audit": "2024-09-15",
+            "has_breach_history": false
+          },
+          "error": "3 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Large', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='3', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=500000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        },
+        {
+          "row": 1,
+          "data": {
+            "company_id": 2,
+            "company_name": "Healthcare",
+            "company_size": "3",
+            "industry": "Medium",
+            "employee_count": 20000000,
+            "data_sensitivity": 300000,
+            "security_budget": 800,
+            "annual_revenue": "Boston",
+            "headquarters_location": "HIPAA",
+            "compliance_certifications": "GDPR",
+            "remote_workers_percentage": "60",
+            "last_security_audit": "2024-08-20",
+            "has_breach_history": false
+          },
+          "error": "4 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Medium', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='3', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\nsecurity_budget\n  Value error, Security budget must be at least $1,000 [type=value_error, input_value=800, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=300000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        },
+        {
+          "row": 2,
+          "data": {
+            "company_id": 3,
+            "company_name": "Finance",
+            "company_size": "3",
+            "industry": "Large",
+            "employee_count": 100000000,
+            "data_sensitivity": 750000,
+            "security_budget": 2000,
+            "annual_revenue": "New York",
+            "headquarters_location": "PCI",
+            "compliance_certifications": "SOC2",
+            "remote_workers_percentage": "70",
+            "last_security_audit": "2024-10-01",
+            "has_breach_history": false
+          },
+          "error": "3 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Large', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='3', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=750000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        },
+        {
+          "row": 3,
+          "data": {
+            "company_id": 4,
+            "company_name": "Education",
+            "company_size": "2",
+            "industry": "Small",
+            "employee_count": 5000000,
+            "data_sensitivity": 50000,
+            "security_budget": 150,
+            "annual_revenue": "Austin",
+            "headquarters_location": NaN,
+            "compliance_certifications": "20",
+            "remote_workers_percentage": "2024-07-10",
+            "last_security_audit": NaN,
+            "has_breach_history": false
+          },
+          "error": "4 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Small', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='2', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\nsecurity_budget\n  Value error, Security budget must be at least $1,000 [type=value_error, input_value=150, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=50000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        },
+        {
+          "row": 4,
+          "data": {
+            "company_id": 5,
+            "company_name": "Retail",
+            "company_size": "1",
+            "industry": "Medium",
+            "employee_count": 30000000,
+            "data_sensitivity": 100000,
+            "security_budget": 500,
+            "annual_revenue": "Chicago",
+            "headquarters_location": NaN,
+            "compliance_certifications": "40",
+            "remote_workers_percentage": "2024-06-30",
+            "last_security_audit": NaN,
+            "has_breach_history": false
+          },
+          "error": "4 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Medium', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='1', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\nsecurity_budget\n  Value error, Security budget must be at least $1,000 [type=value_error, input_value=500, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=100000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        },
+        {
+          "row": 5,
+          "data": {
+            "company_id": 6,
+            "company_name": "Government",
+            "company_size": "2",
+            "industry": "Large",
+            "employee_count": 80000000,
+            "data_sensitivity": 400000,
+            "security_budget": 1200,
+            "annual_revenue": "Washington",
+            "headquarters_location": "FEDRAMP",
+            "compliance_certifications": "90",
+            "remote_workers_percentage": "2024-11-01",
+            "last_security_audit": NaN,
+            "has_breach_history": false
+          },
+          "error": "3 validation errors for CompanyProfile\nindustry\n  Input should be 'Technology', 'Finance', 'Healthcare', 'Education', 'Retail' or 'Government' [type=literal_error, input_value='Large', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ncompany_size\n  Input should be 'Small', 'Medium' or 'Large' [type=literal_error, input_value='2', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error\ndata_sensitivity_level\n  Input should be less than or equal to 3 [type=less_than_equal, input_value=400000, input_type=int]\n    For further information visit https://errors.pydantic.dev/2.12/v/less_than_equal"
+        }
+      ]
+    },
+    "breaches": {
+      "valid": 919,
+      "invalid": 0,
+      "errors": []
+    }
+  },
+  "model_info": {
+    "type": "RandomForestClassifier",
+    "params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  }
+}

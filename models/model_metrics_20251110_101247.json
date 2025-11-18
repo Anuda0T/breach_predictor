@@ -1,0 +1,698 @@
+{
+  "metrics": {
+    "accuracy": 0.6,
+    "precision": 0.4,
+    "recall": 0.6666666666666666,
+    "f1": 0.5,
+    "roc_auc": 0.7142857142857142,
+    "pr_auc": 0.5166666666666666,
+    "timestamp": "2025-11-10 10:12:47",
+    "data_size": 20
+  },
+  "validation_stats": {
+    "companies": {
+      "valid": 100,
+      "invalid": 0,
+      "errors": []
+    },
+    "breaches": {
+      "valid": 0,
+      "invalid": 50,
+      "errors": [
+        {
+          "row": 0,
+          "data": {
+            "company": "000webhost",
+            "domain": "000webhost.com",
+            "breach_date": "2015-03-01",
+            "records_affected": 14936670,
+            "data_classes": "['Email addresses', 'IP addresses', 'Names', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...', 'Names', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 1,
+          "data": {
+            "company": "123RF",
+            "domain": "123rf.com",
+            "breach_date": "2020-03-22",
+            "records_affected": 8661578,
+            "data_classes": "['Email addresses', 'IP addresses', 'Names', 'Passwords', 'Phone numbers', 'Physical addresses', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...addresses', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 2,
+          "data": {
+            "company": "126",
+            "domain": "126.com",
+            "breach_date": "2012-01-01",
+            "records_affected": 6414191,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 3,
+          "data": {
+            "company": "17Media",
+            "domain": "17app.co",
+            "breach_date": "2016-04-19",
+            "records_affected": 4009640,
+            "data_classes": "['Device information', 'Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Device information. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Device information', 'E...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 4,
+          "data": {
+            "company": "17173",
+            "domain": "17173.com",
+            "breach_date": "2011-12-28",
+            "records_affected": 7485802,
+            "data_classes": "['Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 5,
+          "data": {
+            "company": "1win",
+            "domain": "1win.com",
+            "breach_date": "2024-11-02",
+            "records_affected": 96166543,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Geographic locations', 'IP addresses', 'Passwords', 'Phone numbers']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...words', 'Phone numbers'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 6,
+          "data": {
+            "company": "2844Breaches",
+            "domain": NaN,
+            "breach_date": "2018-02-19",
+            "records_affected": 80115532,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 7,
+          "data": {
+            "company": "2fast4u",
+            "domain": "2fast4u.be",
+            "breach_date": "2017-12-20",
+            "records_affected": 17706,
+            "data_classes": "['Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 8,
+          "data": {
+            "company": "500px",
+            "domain": "500px.com",
+            "breach_date": "2018-07-05",
+            "records_affected": 14867999,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'Geographic locations', 'Names', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 9,
+          "data": {
+            "company": "7k7k",
+            "domain": "7k7k.com",
+            "breach_date": "2011-01-01",
+            "records_affected": 9121434,
+            "data_classes": "['Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 10,
+          "data": {
+            "company": "8fit",
+            "domain": "8fit.com",
+            "breach_date": "2018-07-01",
+            "records_affected": 15025407,
+            "data_classes": "['Email addresses', 'Genders', 'Geographic locations', 'IP addresses', 'Names', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Gend...', 'Names', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 11,
+          "data": {
+            "company": "8tracks",
+            "domain": "8tracks.com",
+            "breach_date": "2017-06-27",
+            "records_affected": 17979961,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 12,
+          "data": {
+            "company": "9Lives",
+            "domain": "9lives.be",
+            "breach_date": "2014-10-01",
+            "records_affected": 109515,
+            "data_classes": "['Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 13,
+          "data": {
+            "company": "Abandonia",
+            "domain": "abandonia.com",
+            "breach_date": "2015-11-01",
+            "records_affected": 776125,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 14,
+          "data": {
+            "company": "Abandonia2022",
+            "domain": "abandonia.com",
+            "breach_date": "2022-11-15",
+            "records_affected": 919790,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 15,
+          "data": {
+            "company": "AbuseWithUs",
+            "domain": "abusewith.us",
+            "breach_date": "2016-07-01",
+            "records_affected": 1372550,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 16,
+          "data": {
+            "company": "AcneOrg",
+            "domain": "acne.org",
+            "breach_date": "2014-11-25",
+            "records_affected": 432943,
+            "data_classes": "['Dates of birth', 'Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 17,
+          "data": {
+            "company": "Activision",
+            "domain": "activision.com",
+            "breach_date": "2022-12-04",
+            "records_affected": 16006,
+            "data_classes": "['Email addresses', 'Geographic locations', 'Job titles', 'Names', 'Phone numbers']",
+            "industry": "Technology",
+            "risk_score": 2
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Geog...Names', 'Phone numbers'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 18,
+          "data": {
+            "company": "ActMobile",
+            "domain": "actmobile.com",
+            "breach_date": "2021-10-08",
+            "records_affected": 1583193,
+            "data_classes": "['Email addresses', 'IP addresses']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP addresses'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 19,
+          "data": {
+            "company": "Acuity",
+            "domain": NaN,
+            "breach_date": "2020-06-18",
+            "records_affected": 14055729,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'IP addresses', 'Names', 'Phone numbers', 'Physical addresses', 'Salutations']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...dresses', 'Salutations'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 20,
+          "data": {
+            "company": "Adapt",
+            "domain": "adapt.io",
+            "breach_date": "2018-11-05",
+            "records_affected": 9363740,
+            "data_classes": "['Email addresses', 'Employers', 'Job titles', 'Names', 'Phone numbers', 'Physical addresses', 'Social media profiles']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Empl...'Social media profiles'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 21,
+          "data": {
+            "company": "Adecco",
+            "domain": "adecco.com",
+            "breach_date": "2021-01-03",
+            "records_affected": 4284538,
+            "data_classes": "['Email addresses', 'Genders', 'Geographic locations', 'Marital statuses', 'Names', 'Passwords', 'Phone numbers']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Gend...words', 'Phone numbers'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 22,
+          "data": {
+            "company": "ABFRL",
+            "domain": "abfrl.com",
+            "breach_date": "2021-12-01",
+            "records_affected": 5470063,
+            "data_classes": "['Email addresses', 'Genders', 'Income levels', 'Job titles', 'Marital statuses', 'Names', 'Passwords', 'Phone numbers', 'Physical addresses', 'Purchases', 'Religions', 'Salutations']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Gend...ligions', 'Salutations'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 23,
+          "data": {
+            "company": "Adobe",
+            "domain": "adobe.com",
+            "breach_date": "2013-10-04",
+            "records_affected": 152445165,
+            "data_classes": "['Email addresses', 'Password hints', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Pass...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 24,
+          "data": {
+            "company": "AdoptMeTradingValues",
+            "domain": "adoptmetradingvalues.com",
+            "breach_date": "2022-07-01",
+            "records_affected": 86136,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 25,
+          "data": {
+            "company": "Adpost",
+            "domain": "adpost.com",
+            "breach_date": "2025-02-14",
+            "records_affected": 3339512,
+            "data_classes": "['Email addresses', 'Names', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Names', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 26,
+          "data": {
+            "company": "AdultFriendFinder",
+            "domain": "adultfriendfinder.com",
+            "breach_date": "2015-05-21",
+            "records_affected": 3867997,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'Geographic locations', 'IP addresses', 'Races', 'Relationship statuses', 'Sexual orientations', 'Spoken languages', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...languages', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 27,
+          "data": {
+            "company": "AdultFriendFinder2016",
+            "domain": "adultfriendfinder.com",
+            "breach_date": "2016-10-16",
+            "records_affected": 169746810,
+            "data_classes": "['Email addresses', 'Passwords', 'Spoken languages', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Pass...languages', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 28,
+          "data": {
+            "company": "AdultFanFiction",
+            "domain": "adult-fanfiction.org",
+            "breach_date": "2018-05-30",
+            "records_affected": 186082,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Names', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...', 'Names', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 29,
+          "data": {
+            "company": "AdvanceAutoParts",
+            "domain": "advanceautoparts.com",
+            "breach_date": "2024-06-05",
+            "records_affected": 79243727,
+            "data_classes": "['Email addresses', 'Names', 'Phone numbers', 'Physical addresses']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Name...', 'Physical addresses'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 30,
+          "data": {
+            "company": "AerServ",
+            "domain": "aerserv.com",
+            "breach_date": "2018-04-01",
+            "records_affected": 66308,
+            "data_classes": "['Email addresses', 'Employers', 'Job titles', 'Names', 'Passwords', 'Phone numbers', 'Physical addresses']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Empl...', 'Physical addresses'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 31,
+          "data": {
+            "company": "AgusiQTorrents",
+            "domain": "agusiq-torrents.pl",
+            "breach_date": "2019-09-24",
+            "records_affected": 90478,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 32,
+          "data": {
+            "company": "AhaShare",
+            "domain": "ahashare.com",
+            "breach_date": "2013-05-30",
+            "records_affected": 180468,
+            "data_classes": "['Email addresses', 'Genders', 'Geographic locations', 'IP addresses', 'Partial dates of birth', 'Passwords', 'Usernames', 'Website activity']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Gend...es', 'Website activity'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 33,
+          "data": {
+            "company": "AIType",
+            "domain": "aitype.com",
+            "breach_date": "2017-12-05",
+            "records_affected": 20580060,
+            "data_classes": "['Address book contacts', 'Apps installed on devices', 'Cellular network names', 'Dates of birth', 'Device information', 'Email addresses', 'Genders', 'Geographic locations', 'IMEI numbers', 'IMSI numbers', 'IP addresses', 'Names', 'Phone numbers', 'Profile photos', 'Social media profiles']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Address book contacts. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Address book contacts',...'Social media profiles'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 34,
+          "data": {
+            "company": "Aimware",
+            "domain": "aimware.net",
+            "breach_date": "2019-04-28",
+            "records_affected": 305470,
+            "data_classes": "['Email addresses', 'IP addresses', 'Passwords', 'Private messages', 'Usernames', 'Website activity']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'IP a...es', 'Website activity'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 35,
+          "data": {
+            "company": "Aipai",
+            "domain": "aipai.com",
+            "breach_date": "2016-09-27",
+            "records_affected": 6496778,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 36,
+          "data": {
+            "company": "Ajarn",
+            "domain": "ajarn.com",
+            "breach_date": "2018-12-13",
+            "records_affected": 266399,
+            "data_classes": "['Dates of birth', 'Education levels', 'Email addresses', 'Genders', 'Geographic locations', 'Job applications', 'Marital statuses', 'Names', 'Nationalities', 'Passwords', 'Phone numbers', 'Profile photos']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Educa...bers', 'Profile photos'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 37,
+          "data": {
+            "company": "AKP",
+            "domain": "akparti.org.tr",
+            "breach_date": "2016-07-19",
+            "records_affected": 917461,
+            "data_classes": "['Email addresses', 'Email messages']",
+            "industry": "Technology",
+            "risk_score": 3
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Email messages'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 38,
+          "data": {
+            "company": "AlienStealerLogs",
+            "domain": NaN,
+            "breach_date": "2025-02-15",
+            "records_affected": 284132969,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 39,
+          "data": {
+            "company": "AllianzLife",
+            "domain": "allianzlife.com",
+            "breach_date": "2025-07-16",
+            "records_affected": 1115061,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'Names', 'Phone numbers', 'Physical addresses']",
+            "industry": "Technology",
+            "risk_score": 4
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...', 'Physical addresses'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 40,
+          "data": {
+            "company": "AlpineReplay",
+            "domain": "traceup.com",
+            "breach_date": "2019-08-27",
+            "records_affected": 898681,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'Names', 'Passwords', 'Physical attributes', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...ttributes', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 41,
+          "data": {
+            "company": "Altenen",
+            "domain": "altenens.is",
+            "breach_date": "2022-06-24",
+            "records_affected": 1267701,
+            "data_classes": "['Cryptocurrency wallet addresses', 'Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Cryptocurrency wallet addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Cryptocurrency wallet a...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 42,
+          "data": {
+            "company": "AmartFurniture",
+            "domain": "amartfurniture.com.au",
+            "breach_date": "2022-05-16",
+            "records_affected": 108940,
+            "data_classes": "['Email addresses', 'Names', 'Passwords', 'Phone numbers', 'Physical addresses']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Name...', 'Physical addresses'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 43,
+          "data": {
+            "company": "Ancestry",
+            "domain": "ancestry.com",
+            "breach_date": "2015-11-07",
+            "records_affected": 297806,
+            "data_classes": "['Email addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 44,
+          "data": {
+            "company": "AndroidForums",
+            "domain": "androidforums.com",
+            "breach_date": "2011-10-30",
+            "records_affected": 745355,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Homepage URLs', 'Instant messenger identities', 'IP addresses', 'Passwords']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...addresses', 'Passwords'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 45,
+          "data": {
+            "company": "AndroidLista",
+            "domain": "androidlista.com",
+            "breach_date": "2021-07-28",
+            "records_affected": 6640643,
+            "data_classes": "['Email addresses', 'Names', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Name...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 46,
+          "data": {
+            "company": "AnimalJam",
+            "domain": "animaljam.com",
+            "breach_date": "2020-10-12",
+            "records_affected": 7104998,
+            "data_classes": "['Dates of birth', 'Email addresses', 'Genders', 'IP addresses', 'Names', 'Passwords', 'Physical addresses', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...addresses', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 47,
+          "data": {
+            "company": "AnimeGame",
+            "domain": "animegame.me",
+            "breach_date": "2020-02-27",
+            "records_affected": 1431378,
+            "data_classes": "['Email addresses', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 48,
+          "data": {
+            "company": "Animeify",
+            "domain": "animeify.net",
+            "breach_date": "2021-10-14",
+            "records_affected": 808034,
+            "data_classes": "['Email addresses', 'Genders', 'Names', 'Passwords', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Email addresses. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Email addresses', 'Gend...Passwords', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        },
+        {
+          "row": 49,
+          "data": {
+            "company": "AnimeLeague",
+            "domain": "animeleague.net",
+            "breach_date": "2024-07-04",
+            "records_affected": 192134,
+            "data_classes": "['Dates of birth', 'Email addresses', 'IP addresses', 'Passwords', 'Phone numbers', 'Private messages', 'Purchases', 'Usernames']",
+            "industry": "Technology",
+            "risk_score": 5
+          },
+          "error": "1 validation error for BreachData\ndata_types_affected\n  Value error, Invalid data type: Dates of birth. Must be one of {'Credentials', 'Credit Card', 'Corporate', 'Financial', 'PII', 'Internal', 'SSN', 'Health', 'Email'} [type=value_error, input_value=['Dates of birth', 'Email...Purchases', 'Usernames'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.12/v/value_error"
+        }
+      ]
+    }
+  },
+  "model_info": {
+    "type": "RandomForestClassifier",
+    "params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  }
+}

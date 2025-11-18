@@ -1,0 +1,25 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@breachpredictor.com
+      name: System Administrator
+      password: $2b$12$tD5NrEvbOgytbr6LNyw3BOxdLMDtMg.bpZAuWBFkx79Y4KgK36s8y  # admin123
+    analyst:
+      email: analyst@breachpredictor.com
+      name: Security Analyst
+      password: $2b$12$tD5NrEvbOgytbr6LNyw3BOxdLMDtMg.bpZAuWBFkx79Y4KgK36s8y  # analyst123
+    viewer:
+      email: viewer@breachpredictor.com
+      name: Risk Viewer
+      password: $2b$12$tD5NrEvbOgytbr6LNyw3BOxdLMDtMg.bpZAuWBFkx79Y4KgK36s8y  # viewer123
+
+cookie:
+  expiry_days: 30
+  key: "breach_predictor_auth_key"
+  name: "breach_predictor_auth"
+
+preauthorized:
+  emails:
+    - admin@breachpredictor.com
+    - analyst@breachpredictor.com
+    - viewer@breachpredictor.com

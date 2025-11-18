@@ -1,0 +1,7 @@
+company_name,industry,company_size,data_sensitivity,security_budget,employee_count,annual_revenue,headquarters_location,compliance_certifications,remote_workers_percentage,last_security_audit
+TechCorp,Technology,Large,3,500000,1500,50000000,San Francisco,CA,SOC2,85,2024-09-15
+HealthFirst,Healthcare,Medium,3,300000,800,20000000,Boston,HIPAA,GDPR,60,2024-08-20
+FinanceSecure,Finance,Large,3,750000,2000,100000000,New York,PCI,SOC2,70,2024-10-01
+EduLearn,Education,Small,2,50000,150,5000000,Austin,None,20,2024-07-10
+RetailMart,Retail,Medium,1,100000,500,30000000,Chicago,None,40,2024-06-30
+GovServices,Government,Large,2,400000,1200,80000000,Washington,FEDRAMP,90,2024-11-01
