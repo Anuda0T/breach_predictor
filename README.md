@@ -48,7 +48,27 @@ Features
  Testing  
 - Forecasting tests  
 - Batch prediction tests  
-- Dashboard tests  
+- Dashboard tests
+  
+ Cloud Storage: Why Model & Data Are Stored in S3
+
+This project uses **AWS S3 for storing large files** instead of keeping them inside the GitHub repository.
+
+ Why?
+Some project assets are large and should not be stored in Git directly, including:
+- `breach_predictor_model.pkl` (trained ML model)
+- `breach_data.csv` (920 breach records)
+- `company_profiles.csv` (500 synthetic profiles)
+
+GitHub has a 100 MB limit and storing large datasets in the repository causes performance issues, so these files are stored in **Amazon S3**.
+
+How It Works
+When the project runs, it automatically downloads the required files from S3:
+
+```python
+from download_s3_files import download_files_from_s3
+download_files_from_s3()
+
 
 ---
 
