@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield Calculator - Cybersecurity Risk Assessment Tools</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 8V14C4 21.18 9.84 27.92 16 30C22.16 27.92 28 21.18 28 14V8L16 2Z" fill="#1e90ff"/>
+                    <path d="M16 8L10 11V15C10 18.87 12.69 22.44 16 24C19.31 22.44 22 18.87 22 15V11L16 8Z" fill="#0f1a2b"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>CyberShield Calculator</h1>
+                    <p>AI-Powered Cybersecurity Risk Assessment Tools</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page-content active">
+            <div class="hero-section">
+                <h2 class="hero-title">Professional Cybersecurity Risk Assessment</h2>
+                <p class="hero-subtitle">Choose from our comprehensive suite of calculation tools to assess and mitigate cybersecurity risks</p>
+            </div>
+
+            <!-- Topic Cards Grid -->
+            <div class="topics-grid">
+                <div class="topic-card" onclick="navigateToCalculator('risk')">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Company Risk Calculator</h3>
+                    <p>Calculate company breach risk score based on industry, size, and security posture</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="topic-card" onclick="navigateToCalculator('threat')">
+                    <div class="card-icon">🕵️</div>
+                    <h3>Dark Web Threat Analyzer</h3>
+                    <p>Analyze dark web threats and exposure for specific companies</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="topic-card" onclick="navigateToCalculator('probability')">
+                    <div class="card-icon">🔮</div>
+                    <h3>Breach Probability Predictor</h3>
+                    <p>Predict breach likelihood using machine learning algorithms</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="topic-card" onclick="navigateToCalculator('cost')">
+                    <div class="card-icon">💰</div>
+                    <h3>Security Cost Calculator</h3>
+                    <p>Calculate security investment ROI and cost-benefit analysis</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="topic-card" onclick="navigateToCalculator('impact')">
+                    <div class="card-icon">📊</div>
+                    <h3>Incident Impact Assessor</h3>
+                    <p>Assess breach impact costs and recovery requirements</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="topic-card" onclick="navigateToCalculator('compliance')">
+                    <div class="card-icon">✅</div>
+                    <h3>Compliance Checker</h3>
+                    <p>Check regulatory compliance and identify gaps</p>
+                    <div class="card-arrow">→</div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <h3>Why Choose CyberShield Calculator?</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <h4>AI-Powered</h4>
+                        <p>Machine learning algorithms for accurate risk assessment</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Real-Time</h4>
+                        <p>Live calculations with instant results and recommendations</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Enterprise Security</h4>
+                        <p>Professional-grade tools used by cybersecurity experts</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>Mobile Ready</h4>
+                        <p>Responsive design works on all devices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPANY RISK CALCULATOR PAGE -->
+        <div id="risk-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>🛡️ Company Risk Calculator</h2>
+                <p>Calculate your company's cybersecurity risk score</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="riskForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Company Information</h3>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" id="companyName" placeholder="Enter company name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Industry Sector</label>
+                                <select id="industry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="education">Education</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="government">Government</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="energy">Energy</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Size</label>
+                                <select id="companySize" required>
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small (1-100 employees)</option>
+                                    <option value="medium">Medium (101-1000 employees)</option>
+                                    <option value="large">Large (1000+ employees)</option>
+                                    <option value="enterprise">Enterprise (5000+ employees)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Security Posture</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Annual Security Budget ($)</label>
+                                <input type="number" id="securityBudget" placeholder="100000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Data Sensitivity Level</label>
+                                <select id="dataSensitivity" required>
+                                    <option value="">Select Level</option>
+                                    <option value="1">Low (Public data)</option>
+                                    <option value="2">Medium (Internal data)</option>
+                                    <option value="3">High (Confidential data)</option>
+                                    <option value="4">Critical (PII, Financial data)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Security Training Frequency</label>
+                                <select id="trainingFrequency" required>
+                                    <option value="">Select Frequency</option>
+                                    <option value="none">None</option>
+                                    <option value="annual">Annual</option>
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Multi-Factor Authentication</label>
+                                <select id="mfaEnabled" required>
+                                    <option value="">Select Status</option>
+                                    <option value="none">Not Implemented</option>
+                                    <option value="partial">Partially Implemented</option>
+                                    <option value="full">Fully Implemented</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate Risk Score</button>
+                </form>
+
+                <div id="riskResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Risk Assessment Results</h3>
+                        <div class="results-score">
+                            <div class="score-gauge">
+                                <div class="score-value" id="riskScore">0</div>
+                                <div class="score-label">Risk Score</div>
+                            </div>
+                            <div class="score-level" id="riskLevel">Calculating...</div>
+                        </div>
+                    </div>
+
+                    <div class="results-details">
+                        <div class="risk-breakdown">
+                            <h4>Risk Factor Breakdown</h4>
+                            <div class="factor-list" id="riskFactors">
+                                <!-- Factors will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="recommendations">
+                            <h4>Security Recommendations</h4>
+                            <ul id="recommendationsList">
+                                <!-- Recommendations will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('risk')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('risk')">Calculate Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DARK WEB THREAT ANALYZER PAGE -->
+        <div id="threat-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>🕵️ Dark Web Threat Analyzer</h2>
+                <p>Analyze dark web threats and exposure</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="threatForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Company Analysis</h3>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" id="threatCompanyName" placeholder="Enter company name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Industry</label>
+                                <select id="threatIndustry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="retail">Retail</option>
+                                    <option value="government">Government</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Size</label>
+                                <select id="threatCompanySize" required>
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="enterprise">Enterprise</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Analysis Options</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="checkCredentials" checked>
+                                Check for leaked credentials
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="checkData" checked>
+                                Check for data dumps
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="checkDiscussions" checked>
+                                Check for discussion mentions
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Analyze Threats</button>
+                </form>
+
+                <div id="threatResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Threat Analysis Results</h3>
+                        <div class="results-score">
+                            <div class="score-gauge">
+                                <div class="score-value" id="threatScore">0</div>
+                                <div class="score-label">Threat Level</div>
+                            </div>
+                            <div class="score-level" id="threatLevel">Analyzing...</div>
+                        </div>
+                    </div>
+
+                    <div class="threat-details">
+                        <div class="threat-summary">
+                            <h4>Threat Summary</h4>
+                            <div class="threat-stats" id="threatStats">
+                                <!-- Stats will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="detected-threats">
+                            <h4>Detected Threats</h4>
+                            <div class="threat-list" id="detectedThreats">
+                                <!-- Threats will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('threat')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('threat')">Analyze Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BREACH PROBABILITY PREDICTOR PAGE -->
+        <div id="probability-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>🔮 Breach Probability Predictor</h2>
+                <p>Predict breach likelihood using AI algorithms</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="probabilityForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Security Metrics</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Firewall Effectiveness (1-10)</label>
+                                <input type="number" id="firewallScore" min="1" max="10" value="7" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Employee Training Level (1-10)</label>
+                                <input type="number" id="trainingScore" min="1" max="10" value="6" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Patch Management (1-10)</label>
+                                <input type="number" id="patchScore" min="1" max="10" value="8" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Data Encryption Level (1-10)</label>
+                                <input type="number" id="encryptionScore" min="1" max="10" value="7" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Historical Data</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Previous Breaches (last 5 years)</label>
+                                <input type="number" id="previousBreaches" min="0" value="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Industry Average Breach Rate</label>
+                                <select id="industryRisk" required>
+                                    <option value="low">Low Risk Industry</option>
+                                    <option value="medium">Medium Risk Industry</option>
+                                    <option value="high">High Risk Industry</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Predict Breach Probability</button>
+                </form>
+
+                <div id="probabilityResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Prediction Results</h3>
+                        <div class="results-score">
+                            <div class="score-gauge">
+                                <div class="score-value" id="probabilityScore">0%</div>
+                                <div class="score-label">Breach Probability</div>
+                            </div>
+                            <div class="score-level" id="probabilityLevel">Calculating...</div>
+                        </div>
+                    </div>
+
+                    <div class="prediction-details">
+                        <div class="prediction-timeline">
+                            <h4>Predicted Timeline</h4>
+                            <div class="timeline-info" id="timelineInfo">
+                                <!-- Timeline will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="risk-factors">
+                            <h4>Contributing Factors</h4>
+                            <div class="factor-list" id="probabilityFactors">
+                                <!-- Factors will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('probability')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('probability')">Predict Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECURITY COST CALCULATOR PAGE -->
+        <div id="cost-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>💰 Security Cost Calculator</h2>
+                <p>Calculate security investment ROI</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="costForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Current Security Spending</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Annual Security Budget ($)</label>
+                                <input type="number" id="currentBudget" placeholder="50000" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Size (employees)</label>
+                                <input type="number" id="employeeCount" placeholder="500" min="1" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Security Investments</h3>
+                        <div class="investment-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="investFirewall" checked>
+                                Advanced Firewall ($25,000/year)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="investTraining" checked>
+                                Employee Training ($15,000/year)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="investMonitoring" checked>
+                                24/7 Monitoring ($30,000/year)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="investBackup">
+                                Cloud Backup ($20,000/year)
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate ROI</button>
+                </form>
+
+                <div id="costResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Cost Analysis Results</h3>
+                        <div class="cost-summary">
+                            <div class="cost-item">
+                                <span class="cost-label">Current Annual Cost</span>
+                                <span class="cost-value" id="currentCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Recommended Annual Cost</span>
+                                <span class="cost-value" id="recommendedCost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Potential Savings</span>
+                                <span class="cost-value" id="potentialSavings">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-details">
+                        <div class="roi-analysis">
+                            <h4>ROI Analysis</h4>
+                            <div class="roi-metrics" id="roiMetrics">
+                                <!-- ROI metrics will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="cost-breakdown">
+                            <h4>Cost Breakdown</h4>
+                            <div class="breakdown-chart" id="costBreakdown">
+                                <!-- Cost breakdown will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('cost')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('cost')">Calculate Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INCIDENT IMPACT ASSESSOR PAGE -->
+        <div id="impact-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>📊 Incident Impact Assessor</h2>
+                <p>Assess breach impact costs and recovery</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="impactForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Incident Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Records Compromised</label>
+                                <input type="number" id="recordsAffected" placeholder="10000" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Data Types Compromised</label>
+                                <select id="dataTypes" required>
+                                    <option value="">Select Data Types</option>
+                                    <option value="pii">Personal Information (PII)</option>
+                                    <option value="financial">Financial Data</option>
+                                    <option value="health">Health Records</option>
+                                    <option value="intellectual">Intellectual Property</option>
+                                    <option value="mixed">Mixed Data Types</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Response Timeline</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Detection Time (hours)</label>
+                                <input type="number" id="detectionTime" placeholder="24" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Containment Time (hours)</label>
+                                <input type="number" id="containmentTime" placeholder="48" min="1" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Assess Impact</button>
+                </form>
+
+                <div id="impactResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Impact Assessment Results</h3>
+                        <div class="impact-summary">
+                            <div class="impact-total">
+                                <div class="impact-amount" id="totalCost">$0</div>
+                                <div class="impact-label">Estimated Total Cost</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="impact-details">
+                        <div class="cost-breakdown">
+                            <h4>Cost Breakdown</h4>
+                            <div class="cost-categories" id="costCategories">
+                                <!-- Cost categories will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="recovery-plan">
+                            <h4>Recovery Recommendations</h4>
+                            <ul id="recoverySteps">
+                                <!-- Recovery steps will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('impact')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('impact')">Assess Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPLIANCE CHECKER PAGE -->
+        <div id="compliance-page" class="page-content">
+            <div class="calculator-header">
+                <button class="back-btn" onclick="navigateToPage('home')">← Back to Home</button>
+                <h2>✅ Compliance Checker</h2>
+                <p>Check regulatory compliance status</p>
+            </div>
+
+            <div class="calculator-content">
+                <form id="complianceForm" class="calculator-form">
+                    <div class="form-section">
+                        <h3>Organization Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Industry</label>
+                                <select id="complianceIndustry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="retail">Retail/E-commerce</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="education">Education</option>
+                                    <option value="government">Government</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Size</label>
+                                <select id="complianceSize" required>
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small Business</option>
+                                    <option value="medium">Medium Business</option>
+                                    <option value="large">Large Enterprise</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Data Handling</h3>
+                        <div class="compliance-checks">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="handlesPII">
+                                Handles Personal Identifiable Information (PII)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="handlesFinancial">
+                                Handles Financial Data
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="handlesHealth">
+                                Handles Health/Medical Data
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="international">
+                                Operates Internationally
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Check Compliance</button>
+                </form>
+
+                <div id="complianceResults" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3>Compliance Assessment</h3>
+                        <div class="results-score">
+                            <div class="score-gauge">
+                                <div class="score-value" id="complianceScore">0%</div>
+                                <div class="score-label">Compliance Level</div>
+                            </div>
+                            <div class="score-level" id="complianceLevel">Checking...</div>
+                        </div>
+                    </div>
+
+                    <div class="compliance-details">
+                        <div class="regulations-list">
+                            <h4>Applicable Regulations</h4>
+                            <div class="regulation-items" id="applicableRegulations">
+                                <!-- Regulations will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="compliance-gaps">
+                            <h4>Compliance Gaps</h4>
+                            <ul id="complianceGaps">
+                                <!-- Gaps will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="exportResults('compliance')">Export Report</button>
+                        <button class="btn btn-outline" onclick="resetCalculator('compliance')">Check Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 CyberShield Calculator. Professional cybersecurity risk assessment tools.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

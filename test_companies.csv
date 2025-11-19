@@ -1,0 +1,7 @@
+company_name,industry,company_size,data_sensitivity,security_budget,employee_count
+TechCorp,Technology,Large,3,500000,1500
+HealthFirst,Healthcare,Medium,3,300000,800
+FinanceSecure,Finance,Large,3,750000,2000
+EduLearn,Education,Small,2,50000,150
+RetailMart,Retail,Medium,1,100000,500
+GovServices,Government,Large,2,400000,1200

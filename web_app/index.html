@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Data Breach Prediction System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 8V14C4 21.18 9.84 27.92 16 30C22.16 27.92 28 21.18 28 14V8L16 2Z" fill="#1e90ff"/>
+                    <path d="M16 8L10 11V15C10 18.87 12.69 22.44 16 24C19.31 22.44 22 18.87 22 15V11L16 8Z" fill="#0f1a2b"/>
+                </svg>
+                <span class="brand-text">CyberShield AI</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#threat-monitoring" class="nav-link" data-page="threat-monitoring">Threat Monitoring</a></li>
+                <li><a href="#risk-assessment" class="nav-link" data-page="risk-assessment">Risk Assessment</a></li>
+                <li><a href="#predictions" class="nav-link" data-page="predictions">Predictions</a></li>
+                <li><a href="#alerts" class="nav-link" data-page="alerts">Alerts</a></li>
+                <li><a href="#reports" class="nav-link" data-page="reports">Reports</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="btn-icon" title="Notifications">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2C7.24 2 5 4.24 5 7V11L3 13V14H17V13L15 11V7C15 4.24 12.76 2 10 2ZM11 16H9C9 16.55 9.45 17 10 17C10.55 17 11 16.55 11 16Z"/>
+                    </svg>
+                    <span class="badge">3</span>
+                </button>
+                <button class="btn-icon" title="Settings">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6C7.79 6 6 7.79 6 10C6 12.21 7.79 14 10 14C12.21 14 14 12.21 14 10C14 7.79 12.21 6 10 6ZM17.94 9C17.48 5.61 14.39 3 10.5 3H9.5C5.61 3 2.52 5.61 2.06 9H0V11H2.06C2.52 14.39 5.61 17 9.5 17H10.5C14.39 17 17.48 14.39 17.94 11H20V9H17.94Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page-content active">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">AI-Powered Data Breach Prediction System</h1>
+                    <p class="hero-subtitle">Advanced Machine Learning Platform for Predicting Corporate Data Breach Risks</p>
+                    <p class="hero-description">Real-time threat intelligence • Dark web monitoring • Predictive analytics</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="navigateToPage('risk-assessment')">Get Started</button>
+                        <button class="btn btn-secondary" onclick="navigateToPage('threat-monitoring')">View Live Threats</button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🛡️</div>
+                        <div class="stat-value">99.2%</div>
+                        <div class="stat-label">Prediction Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔍</div>
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Threat Monitoring</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value"><1s</div>
+                        <div class="stat-label">Response Time</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats Dashboard -->
+            <section class="dashboard-section">
+                <h2 class="section-title">System Overview</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-icon status-healthy">●</span>
+                            <h3>System Health</h3>
+                        </div>
+                        <div class="metric-value">Operational</div>
+                        <div class="metric-detail">All systems running normally</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-icon status-warning">●</span>
+                            <h3>Active Threats</h3>
+                        </div>
+                        <div class="metric-value">12</div>
+                        <div class="metric-detail">3 critical, 9 medium priority</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-icon status-info">●</span>
+                            <h3>Companies Monitored</h3>
+                        </div>
+                        <div class="metric-value">1,247</div>
+                        <div class="metric-detail">+23 this week</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <span class="metric-icon status-success">●</span>
+                            <h3>Predictions Today</h3>
+                        </div>
+                        <div class="metric-value">156</div>
+                        <div class="metric-detail">+12% from yesterday</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Alerts Preview -->
+            <section class="alerts-preview-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Security Alerts</h2>
+                    <button class="btn btn-text" onclick="navigateToPage('alerts')">View All →</button>
+                </div>
+                <div class="alerts-list">
+                    <div class="alert-item alert-critical">
+                        <div class="alert-icon">🚨</div>
+                        <div class="alert-content">
+                            <div class="alert-title">Critical: Dark Web Credential Leak Detected</div>
+                            <div class="alert-meta">TechCorp Inc. • 2 minutes ago</div>
+                        </div>
+                        <div class="alert-action">
+                            <button class="btn btn-sm">Investigate</button>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-item alert-high">
+                        <div class="alert-icon">⚠️</div>
+                        <div class="alert-content">
+                            <div class="alert-title">High Risk: Unusual Network Activity</div>
+                            <div class="alert-meta">FinanceHub LLC • 15 minutes ago</div>
+                        </div>
+                        <div class="alert-action">
+                            <button class="btn btn-sm">Review</button>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-item alert-medium">
+                        <div class="alert-icon">ℹ️</div>
+                        <div class="alert-content">
+                            <div class="alert-title">Medium: Vulnerability Scan Complete</div>
+                            <div class="alert-meta">HealthCare Systems • 1 hour ago</div>
+                        </div>
+                        <div class="alert-action">
+                            <button class="btn btn-sm">View Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Access -->
+            <section class="quick-access-section">
+                <h2 class="section-title">Quick Access</h2>
+                <div class="quick-access-grid">
+                    <div class="access-card" onclick="navigateToPage('threat-monitoring')">
+                        <div class="access-icon">🔍</div>
+                        <h3>Threat Monitoring</h3>
+                        <p>Real-time dark web intelligence</p>
+                    </div>
+                    <div class="access-card" onclick="navigateToPage('risk-assessment')">
+                        <div class="access-icon">📊</div>
+                        <h3>Risk Assessment</h3>
+                        <p>Analyze company security posture</p>
+                    </div>
+                    <div class="access-card" onclick="navigateToPage('predictions')">
+                        <div class="access-icon">🔮</div>
+                        <h3>AI Predictions</h3>
+                        <p>Forecast future breach risks</p>
+                    </div>
+                    <div class="access-card" onclick="navigateToPage('reports')">
+                        <div class="access-icon">📈</div>
+                        <h3>Analytics</h3>
+                        <p>Generate detailed reports</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- THREAT MONITORING PAGE -->
+        <div id="threat-monitoring-page" class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">🔍 Threat Monitoring</h1>
+                <p class="page-subtitle">Real-time dark web intelligence and threat detection</p>
+            </div>
+
+            <div class="monitoring-dashboard">
+                <div class="monitoring-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Active Threats</div>
+                        <div class="stat-number">47</div>
+                        <div class="stat-trend trend-up">+8 today</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Dark Web Mentions</div>
+                        <div class="stat-number">1,234</div>
+                        <div class="stat-trend trend-down">-12% this week</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Compromised Credentials</div>
+                        <div class="stat-number">892</div>
+                        <div class="stat-trend trend-up">+23 today</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Threat Score</div>
+                        <div class="stat-number">7.2/10</div>
+                        <div class="stat-trend trend-neutral">Elevated</div>
+                    </div>
+                </div>
+
+                <div class="threat-feed">
+                    <h3 class="feed-title">Live Threat Feed</h3>
+                    <div class="feed-items">
+                        <div class="feed-item severity-critical">
+                            <div class="feed-time">2 min ago</div>
+                            <div class="feed-content">
+                                <strong>Critical:</strong> Database dump containing 50K credentials found on dark web forum
+                            </div>
+                            <div class="feed-source">Source: AlienVault OTX</div>
+                        </div>
+                        <div class="feed-item severity-high">
+                            <div class="feed-time">8 min ago</div>
+                            <div class="feed-content">
+                                <strong>High:</strong> Ransomware group targeting healthcare sector
+                            </div>
+                            <div class="feed-source">Source: VirusTotal</div>
+                        </div>
+                        <div class="feed-item severity-medium">
+                            <div class="feed-time">15 min ago</div>
+                            <div class="feed-content">
+                                <strong>Medium:</strong> New phishing campaign detected
+                            </div>
+                            <div class="feed-source">Source: HIBP</div>
+                        </div>
+                        <div class="feed-item severity-low">
+                            <div class="feed-time">23 min ago</div>
+                            <div class="feed-content">
+                                <strong>Low:</strong> Suspicious domain registration activity
+                            </div>
+                            <div class="feed-source">Source: ThreatFox</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="threat-map">
+                    <h3>Global Threat Distribution</h3>
+                    <div class="map-placeholder">
+                        <div class="map-marker" style="top: 30%; left: 20%;">
+                            <span class="marker-pulse"></span>
+                            <span class="marker-label">North America: 234 threats</span>
+                        </div>
+                        <div class="map-marker" style="top: 35%; left: 50%;">
+                            <span class="marker-pulse"></span>
+                            <span class="marker-label">Europe: 189 threats</span>
+                        </div>
+                        <div class="map-marker" style="top: 50%; left: 75%;">
+                            <span class="marker-pulse"></span>
+                            <span class="marker-label">Asia: 312 threats</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RISK ASSESSMENT PAGE -->
+        <div id="risk-assessment-page" class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">📊 Risk Assessment</h1>
+                <p class="page-subtitle">Comprehensive security posture analysis</p>
+            </div>
+
+            <div class="assessment-form">
+                <h3>Company Risk Analysis</h3>
+                <form id="riskForm">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" class="form-control" placeholder="Enter company name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Industry</label>
+                            <select class="form-control">
+                                <option>Technology</option>
+                                <option>Finance</option>
+                                <option>Healthcare</option>
+                                <option>Education</option>
+                                <option>Retail</option>
+                                <option>Government</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Size</label>
+                            <select class="form-control">
+                                <option>Small (1-100)</option>
+                                <option>Medium (101-1000)</option>
+                                <option>Large (1000+)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Data Sensitivity</label>
+                            <select class="form-control">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Security Budget</label>
+                            <input type="number" class="form-control" placeholder="Annual budget ($)">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="calculateRisk()">Calculate Risk Score</button>
+                </form>
+            </div>
+
+            <div id="riskResults" class="risk-results" style="display: none;">
+                <div class="risk-score-card">
+                    <h3>Risk Assessment Results</h3>
+                    <div class="risk-gauge">
+                        <div class="gauge-value" id="riskScore">7.2</div>
+                        <div class="gauge-label">Risk Score</div>
+                    </div>
+                    <div class="risk-level" id="riskLevel">HIGH RISK</div>
+                </div>
+
+                <div class="risk-factors">
+                    <h4>Risk Factors</h4>
+                    <div class="factor-item">
+                        <span class="factor-name">Industry Risk</span>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 85%;"></div>
+                        </div>
+                        <span class="factor-value">8.5/10</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-name">Data Sensitivity</span>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 75%;"></div>
+                        </div>
+                        <span class="factor-value">7.5/10</span>
+                    </div>
+                    <div class="factor-item">
+                        <span class="factor-name">Security Posture</span>
+                        <div class="factor-bar">
+                            <div class="factor-fill" style="width: 60%;"></div>
+                        </div>
+                        <span class="factor-value">6.0/10</span>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h4>Security Recommendations</h4>
+                    <ul class="recommendation-list">
+                        <li>🔴 Implement multi-factor authentication across all systems</li>
+                        <li>🟡 Conduct comprehensive security audit within 30 days</li>
+                        <li>🟡 Enhance employee security awareness training</li>
+                        <li>🟢 Review and update incident response plan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREDICTIONS PAGE -->
+        <div id="predictions-page" class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">🔮 AI Breach Predictions</h1>
+                <p class="page-subtitle">Machine learning-powered breach forecasting</p>
+            </div>
+
+            <div class="predictions-dashboard">
+                <div class="prediction-summary">
+                    <div class="summary-card">
+                        <h4>Next 30 Days</h4>
+                        <div class="prediction-value">23%</div>
+                        <div class="prediction-label">Breach Probability</div>
+                    </div>
+                    <div class="summary-card">
+                        <h4>High Risk Companies</h4>
+                        <div class="prediction-value">47</div>
+                        <div class="prediction-label">Require Attention</div>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Model Accuracy</h4>
+                        <div class="prediction-value">94.2%</div>
+                        <div class="prediction-label">Last 90 Days</div>
+                    </div>
+                </div>
+
+                <div class="prediction-chart">
+                    <h3>Breach Probability Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="predictionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="prediction-table">
+                    <h3>Company Risk Predictions</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Industry</th>
+                                <th>Risk Score</th>
+                                <th>Probability</th>
+                                <th>Days to Attack</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TechCorp Inc.</td>
+                                <td>Technology</td>
+                                <td><span class="badge badge-critical">9.2</span></td>
+                                <td>87%</td>
+                                <td>12 days</td>
+                                <td><button class="btn btn-sm">Alert</button></td>
+                            </tr>
+                            <tr>
+                                <td>FinanceHub LLC</td>
+                                <td>Finance</td>
+                                <td><span class="badge badge-high">7.8</span></td>
+                                <td>72%</td>
+                                <td>28 days</td>
+                                <td><button class="btn btn-sm">Monitor</button></td>
+                            </tr>
+                            <tr>
+                                <td>HealthCare Systems</td>
+                                <td>Healthcare</td>
+                                <td><span class="badge badge-medium">5.4</span></td>
+                                <td>54%</td>
+                                <td>45 days</td>
+                                <td><button class="btn btn-sm">Review</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALERTS PAGE -->
+        <div id="alerts-page" class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">🚨 Security Alerts</h1>
+                <p class="page-subtitle">Real-time security notifications and incident reports</p>
+            </div>
+
+            <div class="alerts-dashboard">
+                <div class="alerts-filters">
+                    <button class="filter-btn active">All (47)</button>
+                    <button class="filter-btn">Critical (8)</button>
+                    <button class="filter-btn">High (15)</button>
+                    <button class="filter-btn">Medium (18)</button>
+                    <button class="filter-btn">Low (6)</button>
+                </div>
+
+                <div class="alerts-container">
+                    <div class="alert-card alert-critical">
+                        <div class="alert-header">
+                            <span class="alert-badge">CRITICAL</span>
+                            <span class="alert-time">2 minutes ago</span>
+                        </div>
+                        <h3 class="alert-title">Dark Web Credential Leak Detected</h3>
+                        <p class="alert-description">
+                            Database dump containing 50,000 user credentials found on dark web forum. 
+                            Immediate action required to reset passwords and notify affected users.
+                        </p>
+                        <div class="alert-details">
+                            <span><strong>Company:</strong> TechCorp Inc.</span>
+                            <span><strong>Affected Users:</strong> 50,000</span>
+                            <span><strong>Source:</strong> Dark Web Forum</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="btn btn-primary">Investigate</button>
+                            <button class="btn btn-secondary">Acknowledge</button>
+                            <button class="btn btn-text">Dismiss</button>
+                        </div>
+                    </div>
+
+                    <div class="alert-card alert-high">
+                        <div class="alert-header">
+                            <span class="alert-badge">HIGH</span>
+                            <span class="alert-time">15 minutes ago</span>
+                        </div>
+                        <h3 class="alert-title">Unusual Network Activity Detected</h3>
+                        <p class="alert-description">
+                            Abnormal data transfer patterns detected from internal network. 
+                            Possible data exfiltration attempt.
+                        </p>
+                        <div class="alert-details">
+                            <span><strong>Company:</strong> FinanceHub LLC</span>
+                            <span><strong>Data Volume:</strong> 2.3 GB</span>
+                            <span><strong>Source IP:</strong> 192.168.1.45</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="btn btn-primary">Review</button>
+                            <button class="btn btn-secondary">Block IP</button>
+                            <button class="btn btn-text">Dismiss</button>
+                        </div>
+                    </div>
+
+                    <div class="alert-card alert-medium">
+                        <div class="alert-header">
+                            <span class="alert-badge">MEDIUM</span>
+                            <span class="alert-time">1 hour ago</span>
+                        </div>
+                        <h3 class="alert-title">Vulnerability Scan Complete</h3>
+                        <p class="alert-description">
+                            Automated vulnerability scan identified 12 medium-severity issues 
+                            requiring attention within 30 days.
+                        </p>
+                        <div class="alert-details">
+                            <span><strong>Company:</strong> HealthCare Systems</span>
+                            <span><strong>Vulnerabilities:</strong> 12</span>
+                            <span><strong>Scan Type:</strong> Automated</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="btn btn-primary">View Report</button>
+                            <button class="btn btn-text">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REPORTS PAGE -->
+        <div id="reports-page" class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">📈 Analytics & Reports</h1>
+                <p class="page-subtitle">Comprehensive security analytics and data exports</p>
+            </div>
+
+            <div class="reports-dashboard">
+                <div class="report-actions">
+                    <button class="btn btn-primary">Generate Report</button>
+                    <button class="btn btn-secondary">Export Data</button>
+                    <button class="btn btn-secondary">Schedule Report</button>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Breach Statistics</h3>
+                        <div class="stat-row">
+                            <span>Total Breaches Prevented</span>
+                            <strong>234</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Average Response Time</span>
+                            <strong>0.8s</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Success Rate</span>
+                            <strong>94.2%</strong>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <h3>Industry Breakdown</h3>
+                        <div class="chart-mini">
+                            <div class="chart-bar" style="height: 80%;">
+                                <span>Healthcare</span>
+                            </div>
+                            <div class="chart-bar" style="height: 65%;">
+                                <span>Finance</span>
+                            </div>
+                            <div class="chart-bar" style="height: 45%;">
+                                <span>Tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <h3>Threat Trends</h3>
+                        <div class="trend-line">
+                            <div class="trend-point" style="bottom: 20%;"></div>
+                            <div class="trend-point" style="bottom: 35%;"></div>
+                            <div class="trend-point" style="bottom: 45%;"></div>
+                            <div class="trend-point" style="bottom: 60%;"></div>
+                            <div class="trend-point" style="bottom: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-templates">
+                    <h3>Report Templates</h3>
+                    <div class="templates-grid">
+                        <div class="template-card">
+                            <div class="template-icon">📊</div>
+                            <h4>Executive Summary</h4>
+                            <p>High-level overview for stakeholders</p>
+                            <button class="btn btn-sm">Generate</button>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-icon">🔍</div>
+                            <h4>Detailed Analysis</h4>
+                            <p>Comprehensive technical report</p>
+                            <button class="btn btn-sm">Generate</button>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-icon">📈</div>
+                            <h4>Trend Analysis</h4>
+                            <p>Historical data and predictions</p>
+                            <button class="btn btn-sm">Generate</button>
+                        </div>
+                        <div class="template-card">
+                            <div class="template-icon">⚠️</div>
+                            <h4>Incident Report</h4>
+                            <p>Security incident documentation</p>
+                            <button class="btn btn-sm">Generate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="export-options">
+                    <h3>Export Options</h3>
+                    <div class="export-buttons">
+                        <button class="btn btn-outline">Export as PDF</button>
+                        <button class="btn btn-outline">Export as CSV</button>
+                        <button class="btn btn-outline">Export as JSON</button>
+                        <button class="btn btn-outline">Export as Excel</button>
+                    </div>
+                </div>
+            </div

@@ -1,0 +1,48 @@
+{
+  "metrics": {
+    "accuracy": 0.71,
+    "precision": 0.47368421052631576,
+    "recall": 0.6666666666666666,
+    "f1": 0.5538461538461539,
+    "roc_auc": 0.8026382546930492,
+    "pr_auc": 0.539136853571838,
+    "timestamp": "2025-11-18 10:36:38",
+    "data_size": 100
+  },
+  "validation_stats": {
+    "companies": {
+      "valid": 500,
+      "invalid": 0,
+      "errors": []
+    },
+    "breaches": {
+      "valid": 920,
+      "invalid": 0,
+      "errors": []
+    }
+  },
+  "model_info": {
+    "type": "RandomForestClassifier",
+    "params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  }
+}
