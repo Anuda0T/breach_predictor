@@ -1,3 +1,8 @@
+from download_s3_files import download_files_from_s3
+
+# Download from S3 at app startup
+download_files_from_s3()
+
 import streamlit as st
 # page config must be the very first Streamlit command executed in the script
 # placing it at module import time ensures no other st.* calls run before it.
